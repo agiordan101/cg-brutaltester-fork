@@ -17,6 +17,14 @@ At the end of the command, you will get something like this:
 
 How to read it: Player 1 won 7.00% of the time against Player 2. Player 2 won 52.70% of the time against Player 1. The total is not 100% because you have some draws.
 
+## Command lines with codingame chess
+
+java -jar target/cg-brutaltester.jar -r "java -jar ../codingame-chess/target/chess-1.0-SNAPSHOT.jar" -p1 "../codingame_chess/bins/BbMctsPv-rc" -p2 "../codingame_chess/bins/BbMctsPv-rc" -t 1 -n 1 -v
+
+With callgrind inspection :
+
+java -jar target/cg-brutaltester.jar -r "java -jar ../codingame-chess/target/chess-1.0-SNAPSHOT.jar" -p1 "valgrind --tool=callgrind ../codingame_chess/bins/BbMctsPv-rc" -p2 "../codingame_chess/bins/BbMctsPv-rc" -t 1 -n 1 -v
+
 ## How to build from sources
 
 1. Install Java 1.8 (JDK)
